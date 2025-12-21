@@ -1,0 +1,117 @@
+.navbar {
+  background: linear-gradient(135deg, rgba(15, 23, 42, 0.95) 0%, rgba(30, 41, 59, 0.95) 100%);
+  padding: 1rem 0;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  border-bottom: 1px solid rgba(59, 130, 246, 0.1);
+
+  .navbar-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 1rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .navbar-brand {
+    .brand-text {
+      font-size: 1.5rem;
+      font-weight: bold;
+      color: #3b82f6;
+      text-decoration: none;
+      transition: color 0.3s ease;
+
+      &:hover {
+        color: #60a5fa;
+      }
+    }
+  }
+
+  .navbar-toggle {
+    display: none;
+    flex-direction: column;
+    background: none;
+    border: none;
+    cursor: pointer;
+    gap: 0.5rem;
+
+    span {
+      width: 25px;
+      height: 3px;
+      background-color: #3b82f6;
+      transition: all 0.3s ease;
+      display: block;
+    }
+
+    &.active {
+      span:nth-child(1) {
+        transform: rotate(45deg) translateY(10px);
+      }
+      span:nth-child(2) {
+        opacity: 0;
+      }
+      span:nth-child(3) {
+        transform: rotate(-45deg) translateY(-10px);
+      }
+    }
+  }
+
+  .navbar-menu {
+    display: flex;
+
+    .navbar-list {
+      display: flex;
+      list-style: none;
+      gap: 2rem;
+      margin: 0;
+      padding: 0;
+
+      .navbar-item {
+        .navbar-link {
+          color: #cbd5e1;
+          text-decoration: none;
+          transition: color 0.3s ease;
+          padding-bottom: 0.5rem;
+          border-bottom: 2px solid transparent;
+
+          &:hover,
+          &.active {
+            color: #3b82f6;
+            border-bottom-color: #3b82f6;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .navbar {
+    .navbar-toggle {
+      display: flex;
+    }
+
+    .navbar-menu {
+      position: absolute;
+      top: 100%;
+      left: 0;
+      right: 0;
+      background: rgba(15, 23, 42, 0.98);
+      max-height: 0;
+      overflow: hidden;
+      transition: max-height 0.3s ease;
+
+      &.active {
+        max-height: 400px;
+      }
+
+      .navbar-list {
+        flex-direction: column;
+        padding: 1.5rem;
+        gap: 1rem;
+      }
+    }
+  }
+}

@@ -1,0 +1,72 @@
+.education {
+  min-height: 100vh;
+  background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%);
+  padding: 4rem 2rem;
+  color: #e2e8f0;
+
+  .container {
+    max-width: 800px;
+    margin: 0 auto;
+
+    h1 {
+      font-size: 3rem;
+      margin-bottom: 3rem;
+      background: linear-gradient(135deg, #3b82f6, #60a5fa);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+  }
+
+  .education-item {
+    display: flex;
+    gap: 2rem;
+    padding: 2rem;
+    background: rgba(59, 130, 246, 0.05);
+    border-radius: 12px;
+    border-left: 4px solid #3b82f6;
+    margin-bottom: 2rem;
+
+    .education-icon {
+      flex-shrink: 0;
+      width: 80px;
+      height: 80px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      img {
+        width: 100%;
+        height: 100%;
+      }
+    }
+
+    .education-details {
+      flex: 1;
+
+      h2 {
+        font-size: 1.5rem;
+        margin-bottom: 0.5rem;
+        color: #e2e8f0;
+      }
+
+      .institution {
+        font-size: 1.1rem;
+        color: #3b82f6;
+        font-weight: 600;
+        margin-bottom: 0.25rem;
+      }
+
+      .year {
+        color: #a0aec0;
+        font-size: 0.9rem;
+        margin-bottom: 1rem;
+      }
+
+      .description {
+        color: #cbd5e1;
+        line-height: 1.6;
+      }
+    }
+  }
+}

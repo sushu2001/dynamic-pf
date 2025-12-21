@@ -1,0 +1,46 @@
+<nav class="navbar">
+  <div class="navbar-container">
+    <div class="navbar-brand">
+      <a routerLink="/" class="brand-text">SushanT Awathare</a>
+    </div>
+
+    <button class="navbar-toggle" (click)="toggleMenu()" [class.active]="isMenuOpen">
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
+
+    <div class="navbar-menu" [class.active]="isMenuOpen">
+      <ul class="navbar-list">
+        <li class="navbar-item">
+          <a routerLink="/" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }" 
+             class="navbar-link" (click)="closeMenu()">Home</a>
+        </li>
+        <li class="navbar-item">
+          <a routerLink="/about" routerLinkActive="active" 
+             class="navbar-link" (click)="closeMenu()">About</a>
+        </li>
+        <li class="navbar-item">
+          <a routerLink="/education" routerLinkActive="active" 
+             class="navbar-link" (click)="closeMenu()">Education</a>
+        </li>
+        <li class="navbar-item">
+          <a routerLink="/coding-profiles" routerLinkActive="active" 
+             class="navbar-link" (click)="closeMenu()">Coding Profiles</a>
+        </li>
+        <li class="navbar-item">
+          <a routerLink="/skills" routerLinkActive="active" 
+             class="navbar-link" (click)="closeMenu()">Skills</a>
+        </li>
+        <li class="navbar-item">
+          <a routerLink="/services" routerLinkActive="active" 
+             class="navbar-link" (click)="closeMenu()">Services</a>
+        </li>
+        <li class="navbar-item">
+          <a routerLink="/contact" routerLinkActive="active" 
+             class="navbar-link" (click)="closeMenu()">Contact</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>

@@ -1,0 +1,17 @@
+<section class="coding-profiles">
+  <div class="container">
+    <h1>Coding Profiles</h1>
+
+    <div class="profiles-grid">
+      <a *ngFor="let profile of profiles" 
+         [href]="profile.link" 
+         target="_blank" 
+         class="profile-card">
+        <div class="profile-icon">{{ profile.icon }}</div>
+        <h2>{{ profile.name }}</h2>
+        <p class="description">{{ profile.description }}</p>
+        <button class="view-btn">View Profile</button>
+      </a>
+    </div>
+  </div>
+</section>
