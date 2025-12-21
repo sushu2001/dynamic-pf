@@ -10,6 +10,7 @@ import { CommonModule } from '@angular/common';
   styleUrl: './navbar.component.scss'
 })
 export class NavbarComponent {
+  currentDate = new Date();
   isMenuOpen = false;
 
   toggleMenu() {

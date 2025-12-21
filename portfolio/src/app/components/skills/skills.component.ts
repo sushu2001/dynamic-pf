@@ -29,7 +29,7 @@ export class SkillsComponent {
     },
     {
       category: 'Tools',
-      skills: ['Git', 'Docker', 'Jenkins', 'Kubernetes']
+      skills: ['Git', 'Docker', 'Kubernetes']
     }
   ];
 }

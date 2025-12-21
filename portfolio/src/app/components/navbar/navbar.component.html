@@ -1,7 +1,8 @@
 <nav class="navbar">
   <div class="navbar-container">
     <div class="navbar-brand">
-      <a routerLink="/" class="brand-text">SushanT Awathare</a>
+      <img src="assets/icons/SSA logo.svg" class="brand-logo">
+      <!-- <a routerLink="/" class="brand-text">SushanT Awathare</a> -->
     </div>
 
     <button class="navbar-toggle" (click)="toggleMenu()" [class.active]="isMenuOpen">
@@ -43,4 +44,8 @@
       </ul>
     </div>
   </div>
+
+  <footer class="footer">
+      Sushant Awathare © {{currentDate | date:'yyyy'}} All rights reserved.
+  </footer>
 </nav>

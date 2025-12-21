@@ -21,7 +21,7 @@ export class CodingProfilesComponent {
     {
       name: 'LeetCode',
       platform: 'LeetCode',
-      description: '900+ Problems Solved',
+      description: '1000+ Problems Solved',
       link: 'https://leetcode.com',
       icon: '📊'
     },
