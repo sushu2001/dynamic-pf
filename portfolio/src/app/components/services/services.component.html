@@ -1,0 +1,33 @@
+<section class="services">
+  <div class="container">
+    <h1>Experience</h1>
+
+    <div class="tabs">
+      <button 
+        *ngFor="let service of services; let i = index" 
+        [class.active]="selectedServiceIndex === i"
+        (click)="selectService(i)"
+        class="tab-button">
+        <span class="tab-icon">{{ service.icon }}</span>
+        <span class="tab-text">{{ service.company }}</span>
+      </button>
+    </div>
+
+    <div class="service-card">
+      <div class="service-content">
+        <h2>{{ services[selectedServiceIndex].company }}</h2>
+        <h3>{{ services[selectedServiceIndex].position }}</h3>
+        <p class="duration">{{ services[selectedServiceIndex].duration }}</p>
+        <p class="location">Pune, India</p>
+        <div class="certificate-link" *ngIf="services[selectedServiceIndex].certificateLink">
+          <a [href]="services[selectedServiceIndex].certificateLink" target="_blank" rel="noopener noreferrer">
+            📜 View Certificate
+          </a>
+        </div>
+        <ul class="achievements" *ngIf="services[selectedServiceIndex].achievements">
+          <li *ngFor="let achievement of services[selectedServiceIndex].achievements">{{ achievement }}</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
