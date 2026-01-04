@@ -60,6 +60,7 @@
           z-index: 2;
           width: 300px;
           height: 300px;
+          margin: 0 auto;
         }
 
         /* Add layered pseudo element behind the wrapper to simulate depth */
@@ -86,7 +87,7 @@
           width: 100%;
           height: 100%;
           object-fit: cover;
-          border-radius: 0; /* handled by wrapper */
+          border-radius: 0;
           box-shadow: none;
         }
       }

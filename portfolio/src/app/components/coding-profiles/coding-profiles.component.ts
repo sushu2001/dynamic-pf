@@ -14,37 +14,42 @@ interface Profile {
   standalone: true,
   imports: [CommonModule],
   templateUrl: './coding-profiles.component.html',
-  styleUrl: './coding-profiles.component.scss'
+  styleUrls: ['./coding-profiles.component.scss']
 })
 export class CodingProfilesComponent {
   profiles: Profile[] = [
     {
       name: 'LeetCode',
       platform: 'LeetCode',
-      description: '1000+ Problems Solved',
-      link: 'https://leetcode.com',
-      icon: '📊'
-    },
-    {
-      name: 'Codeforces',
-      platform: 'Codeforces',
-      description: 'Specialist',
-      link: 'https://codeforces.com',
-      icon: '🏆'
+      description: '3 ⭐ - 600+ Problems Solved',
+      link: 'https://leetcode.com/u/underRater/',
+      icon: 'assets/images/leetcode.png'
     },
     {
       name: 'GeeksforGeeks',
       platform: 'GeeksforGeeks',
-      description: 'DSA Enthusiast',
-      link: 'https://geeksforgeeks.org',
-      icon: '🎯'
+      description: '300+ Problems Solved',
+      link: 'https://www.geeksforgeeks.org/profile/sushu?tab=activity',
+      icon: 'assets/images/gfg.png'
+    },
+    {
+      name: 'CodeStudio',
+      platform: 'CodeStudio',
+      description: 'Specialist - 200+ Problems Solved',
+      link: 'https://www.naukri.com/code360/profile/awatharesushant',
+      icon: 'assets/icons/codebadge.svg'
     },
     {
       name: 'GitHub',
       platform: 'GitHub',
-      description: 'Projects & Repositories',
-      link: 'https://github.com',
-      icon: '💻'
+      description: '18+ Repositories',
+      link: 'https://github.com/sushu2001',
+      icon: 'assets/images/github.png'
     }
   ];
+
+  isImage(value: string): boolean {
+    if (!value) return false;
+    return /\.(png|jpe?g|gif|svg)$/.test(value) || value.startsWith('assets/') || value.includes('/');
+  }
 }

@@ -7,7 +7,12 @@
          [href]="profile.link" 
          target="_blank" 
          class="profile-card">
-        <div class="profile-icon">{{ profile.icon }}</div>
+        <div class="profile-icon">
+          <img *ngIf="isImage(profile.icon); else emoji" [src]="profile.icon" [alt]="profile.name + ' icon'" />
+          <ng-template #emoji>
+            <span class="emoji">{{ profile.icon }}</span>
+          </ng-template>
+        </div>
         <h2>{{ profile.name }}</h2>
         <p class="description">{{ profile.description }}</p>
         <button class="view-btn">View Profile</button>

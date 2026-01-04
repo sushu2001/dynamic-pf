@@ -1,17 +1,32 @@
 <section class="services">
   <div class="container">
-    <h1>Services</h1>
+    <h1>Experience</h1>
 
-    <div class="services-grid">
-      <div *ngFor="let service of services" class="service-card">
-        <div class="service-image">
-          <img [src]="service.image" [alt]="service.title">
+    <div class="tabs">
+      <button 
+        *ngFor="let service of services; let i = index" 
+        [class.active]="selectedServiceIndex === i"
+        (click)="selectService(i)"
+        class="tab-button">
+        <span class="tab-icon">{{ service.icon }}</span>
+        <span class="tab-text">{{ service.company }}</span>
+      </button>
+    </div>
+
+    <div class="service-card">
+      <div class="service-content">
+        <h2>{{ services[selectedServiceIndex].company }}</h2>
+        <h3>{{ services[selectedServiceIndex].position }}</h3>
+        <p class="duration">{{ services[selectedServiceIndex].duration }}</p>
+        <p class="location">Pune, India</p>
+        <div class="certificate-link" *ngIf="services[selectedServiceIndex].certificateLink">
+          <a [href]="services[selectedServiceIndex].certificateLink" target="_blank" rel="noopener noreferrer">
+            📜 View Certificate
+          </a>
         </div>
-        <div class="service-content">
-          <div class="service-icon">{{ service.icon }}</div>
-          <h2>{{ service.title }}</h2>
-          <p>{{ service.description }}</p>
-        </div>
+        <ul class="achievements" *ngIf="services[selectedServiceIndex].achievements">
+          <li *ngFor="let achievement of services[selectedServiceIndex].achievements">{{ achievement }}</li>
+        </ul>
       </div>
     </div>
   </div>

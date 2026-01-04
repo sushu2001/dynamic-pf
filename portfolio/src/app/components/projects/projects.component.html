@@ -1,0 +1,32 @@
+<section class="projects">
+  <div class="container">
+    <h1>Projects</h1>
+
+    <div class="tabs">
+      <button
+        *ngFor="let project of projects; let i = index"
+        [class.active]="selectedProjectIndex === i"
+        (click)="selectProject(i)"
+        class="tab-button">
+        <span class="tab-text">{{ project.title }}</span>
+      </button>
+    </div>
+
+    <div class="project-card">
+      <div class="project-content">
+        <h2>{{ projects[selectedProjectIndex].title }}</h2>
+        <p class="description">{{ projects[selectedProjectIndex].description }}</p>
+
+        <ul class="tech-list" *ngIf="projects[selectedProjectIndex].tech">
+          <li *ngFor="let t of projects[selectedProjectIndex].tech">{{ t }}</li>
+        </ul>
+
+        <div class="project-actions">
+          <a *ngIf="projects[selectedProjectIndex].live" [href]="projects[selectedProjectIndex].live" target="_blank" rel="noopener noreferrer" class="btn btn-live">View Live</a>
+          <a *ngIf="projects[selectedProjectIndex].github" [href]="projects[selectedProjectIndex].github" target="_blank" rel="noopener noreferrer" class="btn btn-github">GitHub</a>
+          <a *ngIf="!projects[selectedProjectIndex].live && projects[selectedProjectIndex].link" [href]="projects[selectedProjectIndex].link" target="_blank" rel="noopener noreferrer" class="btn btn-live">View Project</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

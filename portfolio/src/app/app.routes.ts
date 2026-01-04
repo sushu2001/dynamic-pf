@@ -6,6 +6,7 @@ import { CodingProfilesComponent } from './components/coding-profiles/coding-pro
 import { SkillsComponent } from './components/skills/skills.component';
 import { ServicesComponent } from './components/services/services.component';
 import { ContactComponent } from './components/contact/contact.component';
+import { ProjectsComponent } from './components/projects/projects.component';
 
 
 export const routes: Routes = [
@@ -13,6 +14,7 @@ export const routes: Routes = [
   { path: 'about', component: AboutComponent },
   { path: 'education', component: EducationComponent },
   { path: 'coding-profiles', component: CodingProfilesComponent },
+  { path: 'projects', component: ProjectsComponent },
   { path: 'skills', component: SkillsComponent },
   { path: 'services', component: ServicesComponent },
   { path: 'contact', component: ContactComponent }

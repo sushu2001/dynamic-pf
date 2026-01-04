@@ -1,6 +1,6 @@
 .navbar {
   background: linear-gradient(135deg, rgba(15, 23, 42, 0.95) 0%, rgba(30, 41, 59, 0.95) 100%);
-  padding: 1rem 0;
+  padding: 0.4rem 0;
   position: sticky;
   top: 0;
   z-index: 100;
@@ -16,18 +16,25 @@
   }
 
   .navbar-brand {
-    .brand-text {
-      font-size: 1.5rem;
-      font-weight: bold;
-      color: #3b82f6;
-      text-decoration: none;
-      transition: color 0.3s ease;
+    // .brand-text {
+    //   font-size: 1.5rem;
+    //   font-weight: bold;
+    //   color: #3b82f6;
+    //   text-decoration: none;
+    //   transition: color 0.3s ease;
 
-      &:hover {
-        color: #60a5fa;
-      }
+    //   &:hover {
+    //     color: #60a5fa;
+    //   }
+    // }
+
+     .portfolio-logo{
+      width: 40px;
+      height: 40px;
     }
   }
+
+ 
 
   .navbar-toggle {
     display: none;
@@ -62,18 +69,18 @@
     display: flex;
 
     .navbar-list {
-      display: flex;
-      list-style: none;
-      gap: 2rem;
-      margin: 0;
-      padding: 0;
+    display: flex;
+    list-style: none;
+    gap: 2rem;
+    margin: 0;
+    padding: 0;
 
       .navbar-item {
         .navbar-link {
           color: #cbd5e1;
           text-decoration: none;
           transition: color 0.3s ease;
-          padding-bottom: 0.5rem;
+          padding-bottom: 0.25rem;
           border-bottom: 2px solid transparent;
 
           &:hover,
@@ -109,8 +116,8 @@
 
       .navbar-list {
         flex-direction: column;
-        padding: 1.5rem;
-        gap: 1rem;
+        padding: 0.75rem;
+        gap: 0.75rem;
       }
     }
   }

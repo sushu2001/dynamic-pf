@@ -17,19 +17,20 @@ export class SkillsComponent {
   skillCategories: SkillCategory[] = [
     {
       category: 'Languages',
-      skills: ['C++', 'JavaScript', 'SQL', 'TypeScript']
+      skills: ['C++', 'Java','JavaScript', 'SQL', 'TypeScript', 'C']
     },
     {
-      category: 'Frontend',
-      skills: ['Angular', 'React', 'HTML', 'CSS', 'SCSS']
+      category: 'Development',
+      skills: ['Angular', 'React.js', 'HTML', 'CSS', 'SCSS', 'REST', 'NestJS', 'Node.js', 'Postgres', 'ASP.NET Core', 'MongoDB']
     },
     {
-      category: 'Backend',
-      skills: ['Node.js', '.NET', 'C#']
+      category: 'Fundamentals',
+      skills: ['Data Structures and Algorithms', 'Object Oriented Programming', 'Database Management System', 
+'Operating Systems', 'Computer Networks']
     },
     {
-      category: 'Tools',
-      skills: ['Git', 'Docker', 'Kubernetes']
+      category: 'Tools/Technologies',
+      skills: ['CI/CD', 'Git', 'Azure Devops', 'Postman', 'Cypress', 'Jest', 'Docker', 'Kubernetes', 'Linux']
     }
   ];
 }
